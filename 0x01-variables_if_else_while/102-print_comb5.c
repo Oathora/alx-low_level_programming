@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinaions of two two-digit numbers
- * combinations of two digit integers without duplicates
- *
- * Return: 0 (success)
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,18 +14,18 @@ int main(void)
 		{
 			if (i < j)
 			{
-
-					putchar((i / 10) + 48);
-					putchar((i % 10) + 48);
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
 					putchar(' ');
-					putchar((j / 10) + 48);
-					putchar(( j % 10) +48);
-					if (i != 98 || j !=99)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+				}
 			}
+
 		}
 	}
 	putchar('\n');
